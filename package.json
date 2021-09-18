@@ -1,5 +1,13 @@
 {
   "version": "1.0.0",
+  "name": "maybe",
+  "license": "MIT",
+  "author": "Timothy Merritt",
+  "description": "A simple API call that answers either yes or no.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timmybytes/maybe.git"
+  },
   "dependencies": {
     "@babel/core": "7.x.x",
     "@babel/preset-env": "7.x.x",

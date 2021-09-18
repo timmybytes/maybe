@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './app.css';
 import logo from '../public/logo.png'; 
-import { Button } from '@chakra-ui/react'
-  
   
 const App = () => {
   const [yesno, setYesno] = useState({})
@@ -25,21 +23,39 @@ const App = () => {
         flexDirection: 'column', 
         justifyContent: 'center', 
         alignItems: 'center'
-        }}
-      >
-      <h1>{yesno.answer}</h1>
+      }}
+    >
+      <h1 
+        style={{
+          fontSize: '2.5rem'
+        }}>{yesno.answer}</h1>
       <img 
         style={{
           width: '100%', 
           height: 'auto', 
-          maxWidth: '90vw'
+          maxWidth: '90vw',
+          borderRadius: '4px'
           }} 
         src={yesno.image} 
         alt='yesno' 
       />
-      <Button 
-        onClick={() => setRenew(!renew)}
-      >Ask again</Button>
+      <button 
+        onClick={
+          () => setRenew(!renew)
+        }
+        style={{
+          outline: 'none',
+          border: 'none',
+          borderRadius: '4px',
+          padding: '.5rem 1rem',
+          fontSize: '1rem',
+          margin: '1rem',
+          boxShadow: 
+            '2px 2px 10px rgba(0,0,0,0.3)'
+        }}
+      >
+        Ask again
+      </button>
     </div>
   )    
 }
